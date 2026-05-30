@@ -32,7 +32,7 @@ export async function POST(req: NextRequest) {
     }
 
     // ── 2. Check for duplicate ──
-    const existing = await adminDb
+    const existing = await adminDb()
       .collection('webinar_registrants')
       .where('email', '==', email.toLowerCase())
       .limit(1)
@@ -46,7 +46,7 @@ export async function POST(req: NextRequest) {
     }
 
     // ── 3. Save to Firestore ──
-    const docRef = await adminDb.collection('webinar_registrants').add({
+    const docRef = await adminDb().collection
       firstName,
       lastName,
       fullName: `${firstName} ${lastName}`,
