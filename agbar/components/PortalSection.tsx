@@ -46,7 +46,7 @@ export default function PortalSection() {
           borderBottom: '1px solid rgba(255,255,255,0.06)',
         }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-            <img src="/logo.jpg" alt="Àgbàr" style={{ height: '22px', filter: 'brightness(0) invert(1)', opacity: 0.85 }} />
+            <img src="/logo.png" alt="Àgbàr" style={{ height: '22px', filter: 'brightness(0) invert(1)', opacity: 0.85 }} />
             <span style={{ fontSize: '13px', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.08em' }}>Portal</span>
           </div>
           <div style={{ fontSize: '12px', color: 'rgba(255,255,255,0.3)', letterSpacing: '0.04em' }}>

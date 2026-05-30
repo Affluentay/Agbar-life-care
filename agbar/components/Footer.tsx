@@ -12,7 +12,7 @@ export default function Footer() {
       <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', gap: '64px', marginBottom: '64px' }}>
         {/* Brand */}
         <div>
-          <img src="/logo.jpg" alt="Àgbàr Life Care"
+          <img src="/logo.png" alt="Àgbàr Life Care"
             style={{ height: '40px', width: 'auto', filter: 'brightness(0) invert(1)', opacity: 0.8, marginBottom: '20px', display: 'block' }} />
           <p style={{ fontSize: '14px', fontWeight: 300, lineHeight: 1.8, color: 'rgba(255,255,255,0.35)', maxWidth: '260px' }}>
             Africa's premier geriatric care ecosystem — bridging Nigerian families across every border with clinical excellence, cultural dignity, and technology.

@@ -44,7 +44,7 @@ export default function Navbar({ onBookClick }: NavbarProps) {
           aria-label="Back to top"
         >
           <img
-            src="/logo.jpg"
+            src="/logo.png"
             alt="Àgbàr Life Care"
             style={{ height: '36px', width: 'auto', filter: 'brightness(0) invert(1)' }}
           />

@@ -72,7 +72,7 @@ export default function HeroSection({ onWebinarClick, onPackagesClick }: HeroPro
 
         {/* Logo */}
         <div style={{ marginBottom: '48px', animation: 'fadeDown 1s ease 0.2s both' }}>
-          <img src="/logo.jpg" alt="Àgbàr Life Care"
+          <img src="/logo.png" alt="Àgbàr Life Care"
             style={{ height: '60px', width: 'auto', filter: 'brightness(0) invert(1)' }} />
         </div>
 

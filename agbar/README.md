@@ -39,7 +39,7 @@ npm install
 
 ## 3. Add your logo
 
-Copy your logo file into `/public/logo.jpg`  
+Copy your logo file into `/public/logo.png`  
 (This is what the navbar and hero use — must be exactly this name)
 
 ---
@@ -172,7 +172,7 @@ agbar-life-care/
 │   ├── email.ts            # Nodemailer email functions
 │   └── useReveal.ts        # Scroll reveal hook
 ├── public/
-│   └── logo.jpg            # ← PUT YOUR LOGO HERE
+│   └── logo.png            # ← PUT YOUR LOGO HERE
 ├── .env.example            # Template for environment variables
 ├── .env.local              # ← YOUR REAL KEYS (never commit this)
 ├── .gitignore
@@ -214,6 +214,6 @@ const config = {
   currency: 'NGN',
   payment_options: 'card,ussd,banktransfer',
   customer: { email, name, phone_number },
-  customizations: { title: 'Àgbàr Life Care', description: packageName, logo: '/logo.jpg' },
+  customizations: { title: 'Àgbàr Life Care', description: packageName, logo: '/logo.png' },
 }
 ```
