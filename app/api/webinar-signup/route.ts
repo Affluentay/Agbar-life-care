@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic'
 // app/api/webinar-signup/route.ts
 // Handles webinar registration:
 //   1. Validates input
