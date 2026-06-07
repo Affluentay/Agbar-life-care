@@ -172,12 +172,7 @@ export default function WebinarSection() {
           )}
         </div>
       </div>
-
-      <style>{`
-        @media (max-width: 900px) {
-          #webinar { grid-template-columns: 1fr !important; padding: 80px 24px !important; gap: 48px !important; }
-        }
-      `}</style>
+      `
     </section>
   )
 }

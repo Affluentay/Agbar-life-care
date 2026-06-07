@@ -147,15 +147,7 @@ export default function Navbar({ onBookClick }: NavbarProps) {
           </button>
         </div>
       )}
-
-      <style>{`
-        @media (max-width: 768px) {
-          .nav-desktop { display: none !important; }
-          .nav-hamburger { display: flex !important; }
-          nav { padding: 0 24px !important; }
-          nav .btn-terra { display: none !important; }
-        }
-      `}</style>
+      `
     </>
   )
 }

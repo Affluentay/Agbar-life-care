@@ -97,16 +97,7 @@ export default function ServicesSection() {
           </div>
         ))}
       </div>
-
-      <style>{`
-        .svc-card:hover { background: var(--cream) !important; }
-        .svc-card:hover .svc-num { color: rgba(196,94,30,0.2) !important; }
-        .svc-card:hover .svc-bar { transform: scaleX(1) !important; }
-        @media (max-width: 900px) {
-          #services { padding: 80px 24px !important; }
-          #services > div:last-child { grid-template-columns: 1fr !important; }
-        }
-      `}</style>
+`
     </section>
   )
 }

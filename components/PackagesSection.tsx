@@ -158,15 +158,7 @@ export default function PackagesSection({ onSelect }: PackagesProps) {
           </div>
         ))}
       </div>
-
-      <style>{`
-        .pkg-btn:hover { background: var(--forest) !important; color: #fff !important; }
-        .pkg-btn-featured:hover { background: var(--terra-light) !important; }
-        @media (max-width: 900px) {
-          #packages { padding: 80px 24px !important; }
-          #packages > div:last-child { grid-template-columns: 1fr !important; }
-        }
-      `}</style>
+      `
     </section>
   )
 }

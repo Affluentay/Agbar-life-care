@@ -53,13 +53,6 @@ export default function Footer() {
           SSL Secured · Flutterwave · NDPR Compliant
         </div>
       </div>
-
-      <style>{`
-        @media (max-width: 900px) {
-          footer { padding: 64px 24px 40px !important; }
-          footer > div:first-child { grid-template-columns: 1fr 1fr !important; gap: 40px !important; }
-        }
-      `}</style>
     </footer>
   )
 }

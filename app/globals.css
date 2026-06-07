@@ -237,3 +237,42 @@ body::before {
 
 /* ── Divider ── */
 .divider { height: 1px; background: var(--sand); }
+
+.svc-card:hover { background: var(--cream) !important; }
+  .svc-card:hover .svc-num { color: rgba(196,94,30,0.2) !important; }
+  .svc-card:hover .svc-bar { transform: scaleX(1) !important; }
+  @media (max-width: 900px) {
+    #services { padding: 80px 24px !important; }
+    #services > div:last-child { grid-template-columns: 1fr !important; }
+  }
+
+  @media (max-width: 900px) {
+          #webinar { grid-template-columns: 1fr !important; padding: 80px 24px !important; gap: 48px !important; }
+        }
+
+        .pkg-btn:hover { background: var(--forest) !important; color: #fff !important; }
+        .pkg-btn-featured:hover { background: var(--terra-light) !important; }
+        @media (max-width: 900px) {
+          #packages { padding: 80px 24px !important; }
+          #packages > div:last-child { grid-template-columns: 1fr !important; }
+        }
+
+         @media (max-width: 768px) {
+          .nav-desktop { display: none !important; }
+          .nav-hamburger { display: flex !important; }
+          nav { padding: 0 24px !important; }
+          nav .btn-terra { display: none !important; }
+        }
+
+        @media (max-width: 900px) {
+          footer { padding: 64px 24px 40px !important; }
+          footer > div:first-child { grid-template-columns: 1fr 1fr !important; gap: 40px !important; }
+        }
+
+        @media (max-width: 768px) {
+          div[style*="justify-content: space-between"] { padding: 48px 24px !important; justify-content: center !important; }
+        }
+
+        @media (max-width: 768px) {
+  #trust-strip { padding: 48px 24px !important; justify-content: center !important; }
+}
