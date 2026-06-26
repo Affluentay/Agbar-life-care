@@ -120,12 +120,7 @@ export default function PortalSection() {
         </div>
       </div>
 
-      <style>{`
-        @media (max-width: 900px) {
-          #portal { padding: 80px 24px !important; }
-          #portal .portal-sidebar { display: none; }
-        }
-      `}</style>
+      
     </section>
   )
 }

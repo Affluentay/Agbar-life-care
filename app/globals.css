@@ -276,3 +276,23 @@ body::before {
         @media (max-width: 768px) {
   #trust-strip { padding: 48px 24px !important; justify-content: center !important; }
 }
+/* ── Package buttons ── */
+.pkg-btn:hover { background: var(--forest) !important; color: #fff !important; }
+.pkg-btn-featured:hover { background: var(--terra-light) !important; }
+
+/* ── Portal sidebar ── */
+@media (max-width: 900px) {
+  #portal { padding: 80px 24px !important; }
+  .portal-sidebar { display: none; }
+  .pm-cards { grid-template-columns: 1fr !important; }
+}
+
+/* ── Webinar section ── */
+@media (max-width: 900px) {
+  #webinar { grid-template-columns: 1fr !important; padding: 80px 24px !important; gap: 48px !important; }
+}
+
+/* ── About band ── */
+@media (max-width: 900px) {
+  .about-band { grid-template-columns: 1fr !important; }
+}

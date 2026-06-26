@@ -1,8 +1,6 @@
 'use client'
-// components/Navbar.tsx
 
 import { useEffect, useState } from 'react'
-import Image from 'next/image'
 
 interface NavbarProps {
   onBookClick: () => void
@@ -25,59 +23,74 @@ export default function Navbar({ onBookClick }: NavbarProps) {
 
   return (
     <>
-      <nav
-        style={{
-          position: 'fixed', top: 0, left: 0, right: 0, zIndex: 500,
-          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-          padding: '0 56px', height: '72px',
-          background: scrolled ? 'rgba(26,26,20,0.97)' : 'rgba(58,90,39,0.96)',
-          backdropFilter: 'blur(16px)',
-          borderBottom: '1px solid rgba(255,255,255,0.08)',
-          boxShadow: scrolled ? '0 4px 32px rgba(0,0,0,0.3)' : 'none',
-          transition: 'all 0.35s ease',
-        }}
-      >
+      <nav style={{
+        position: 'fixed', top: 0, left: 0, right: 0, zIndex: 500,
+        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+        padding: '0 56px', height: '72px',
+        background: scrolled ? 'rgba(26,26,20,0.97)' : 'rgba(58,90,39,0.96)',
+        backdropFilter: 'blur(16px)',
+        borderBottom: '1px solid rgba(255,255,255,0.08)',
+        boxShadow: scrolled ? '0 4px 32px rgba(0,0,0,0.3)' : 'none',
+        transition: 'all 0.35s ease',
+      }}>
+
         {/* Logo */}
-        <button
-          onClick={() => scrollTo('home')}
-          style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
-          aria-label="Back to top"
-        >
+        <a href="/" style={{ display: 'block', lineHeight: 0 }}>
           <img
             src="/logo.png"
             alt="Àgbàr Life Care"
             style={{ height: '36px', width: 'auto', filter: 'brightness(0) invert(1)' }}
           />
-        </button>
+        </a>
 
         {/* Desktop links */}
         <ul style={{
-          display: 'flex', gap: '36px', listStyle: 'none',
-          margin: 0, padding: 0,
+          display: 'flex', gap: '36px', listStyle: 'none', margin: 0, padding: 0,
         }} className="nav-desktop">
-          {[
-            ['Services', 'services'],
-            ['Webinar', 'webinar'],
-            ['Packages', 'packages'],
-            ['Portal', 'portal'],
-          ].map(([label, id]) => (
-            <li key={id}>
-              <button
-                onClick={() => scrollTo(id)}
-                style={{
-                  background: 'none', border: 'none', cursor: 'pointer',
-                  fontSize: '12px', fontWeight: 400, letterSpacing: '0.12em',
-                  textTransform: 'uppercase', color: 'rgba(255,255,255,0.7)',
-                  fontFamily: 'var(--font-sans)', padding: '4px 0',
-                  transition: 'color 0.2s',
-                }}
-                onMouseEnter={e => (e.currentTarget.style.color = '#fff')}
-                onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.7)')}
-              >
-                {label}
-              </button>
-            </li>
-          ))}
+          <li>
+            <button onClick={() => scrollTo('services')} style={{
+              background: 'none', border: 'none', cursor: 'pointer',
+              fontSize: '12px', fontWeight: 400, letterSpacing: '0.12em',
+              textTransform: 'uppercase', color: 'rgba(255,255,255,0.7)',
+              fontFamily: 'var(--font-sans)', padding: '4px 0',
+            }}
+              onMouseEnter={e => (e.currentTarget.style.color = '#fff')}
+              onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.7)')}
+            >Services</button>
+          </li>
+          <li>
+            
+          </li>
+          <li>
+            <a href="/packages" style={{
+              fontSize: '12px', fontWeight: 400, letterSpacing: '0.12em',
+              textTransform: 'uppercase', color: 'rgba(255,255,255,0.7)',
+              fontFamily: 'var(--font-sans)', textDecoration: 'none', display: 'block',
+            }}
+              onMouseEnter={e => (e.currentTarget.style.color = '#fff')}
+              onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.7)')}
+            >Packages</a>
+          </li>
+          <li>
+            <a href="/about" style={{
+              fontSize: '12px', fontWeight: 400, letterSpacing: '0.12em',
+              textTransform: 'uppercase', color: 'rgba(255,255,255,0.7)',
+              fontFamily: 'var(--font-sans)', textDecoration: 'none', display: 'block',
+            }}
+              onMouseEnter={e => (e.currentTarget.style.color = '#fff')}
+              onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.7)')}
+            >About</a>
+          </li>
+          <li>
+            <a href="/contact" style={{
+              fontSize: '12px', fontWeight: 400, letterSpacing: '0.12em',
+              textTransform: 'uppercase', color: 'rgba(255,255,255,0.7)',
+              fontFamily: 'var(--font-sans)', textDecoration: 'none', display: 'block',
+            }}
+              onMouseEnter={e => (e.currentTarget.style.color = '#fff')}
+              onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.7)')}
+            >Contact</a>
+          </li>
         </ul>
 
         {/* CTA */}
@@ -102,8 +115,7 @@ export default function Navbar({ onBookClick }: NavbarProps) {
           {[0, 1, 2].map(i => (
             <span key={i} style={{
               display: 'block', width: '22px', height: '2px',
-              background: '#fff', borderRadius: '1px',
-              transition: 'all 0.2s',
+              background: '#fff', borderRadius: '1px', transition: 'all 0.2s',
             }} />
           ))}
         </button>
@@ -116,28 +128,31 @@ export default function Navbar({ onBookClick }: NavbarProps) {
           background: 'rgba(26,26,20,0.98)', backdropFilter: 'blur(16px)',
           padding: '24px 32px', borderBottom: '1px solid rgba(255,255,255,0.08)',
         }}>
+          <button onClick={() => scrollTo('services')} style={{
+            display: 'block', width: '100%', textAlign: 'left',
+            background: 'none', border: 'none', cursor: 'pointer',
+            fontSize: '14px', fontWeight: 400, letterSpacing: '0.1em',
+            textTransform: 'uppercase', color: 'rgba(255,255,255,0.7)',
+            fontFamily: 'var(--font-sans)', padding: '14px 0',
+            borderBottom: '1px solid rgba(255,255,255,0.06)',
+          }}>Services</button>
+
           {[
-            ['Services', 'services'],
-            ['Webinar', 'webinar'],
-            ['Packages', 'packages'],
-            ['Portal', 'portal'],
-          ].map(([label, id]) => (
-            <button
-              key={id}
-              onClick={() => scrollTo(id)}
-              style={{
-                display: 'block', width: '100%', textAlign: 'left',
-                background: 'none', border: 'none', cursor: 'pointer',
-                fontSize: '14px', fontWeight: 400, letterSpacing: '0.1em',
-                textTransform: 'uppercase', color: 'rgba(255,255,255,0.7)',
-                fontFamily: 'var(--font-sans)', padding: '14px 0',
-                borderBottom: '1px solid rgba(255,255,255,0.06)',
-                transition: 'color 0.2s',
-              }}
-            >
-              {label}
-            </button>
+            ['Portal', '/Portal'],
+            ['Packages', '/packages'],
+            ['About', '/about'],
+            ['Contact', '/contact'],
+          ].map(([label, href]) => (
+            <a key={href} href={href} onClick={() => setMenuOpen(false)} style={{
+              display: 'block', width: '100%', textAlign: 'left',
+              fontSize: '14px', fontWeight: 400, letterSpacing: '0.1em',
+              textTransform: 'uppercase', color: 'rgba(255,255,255,0.7)',
+              fontFamily: 'var(--font-sans)', padding: '14px 0',
+              borderBottom: '1px solid rgba(255,255,255,0.06)',
+              textDecoration: 'none',
+            }}>{label}</a>
           ))}
+
           <button
             onClick={() => { onBookClick(); setMenuOpen(false) }}
             className="btn btn-terra"
@@ -147,7 +162,15 @@ export default function Navbar({ onBookClick }: NavbarProps) {
           </button>
         </div>
       )}
-      `
+
+      <style>{`
+        @media (max-width: 768px) {
+          .nav-desktop { display: none !important; }
+          .nav-hamburger { display: flex !important; }
+          nav { padding: 0 24px !important; }
+          nav .btn-terra { display: none !important; }
+        }
+      `}</style>
     </>
   )
 }

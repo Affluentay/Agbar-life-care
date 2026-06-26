@@ -8,7 +8,6 @@ import Navbar from '@/components/Navbar'
 import HeroSection from '@/components/HeroSection'
 import TickerStrip from '@/components/TickerStrip'
 import ServicesSection from '@/components/ServicesSection'
-import WebinarSection from '@/components/WebinarSection'
 import PackagesSection from '@/components/PackagesSection'
 import PortalSection from '@/components/PortalSection'
 import TrustStrip from '@/components/TrustStrip'
@@ -36,15 +35,12 @@ export default function HomePage() {
       <Navbar onBookClick={() => openModal('Nuru Essentials Odogwu', '₦85,000/month')} />
 
       <HeroSection
-        onWebinarClick={() => scrollToSection('webinar')}
         onPackagesClick={() => scrollToSection('packages')}
       />
 
       <TickerStrip />
 
       <ServicesSection />
-
-      <WebinarSection />
 
       <PackagesSection onSelect={(name, price) => openModal(name, price)} />
 
