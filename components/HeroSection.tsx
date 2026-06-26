@@ -4,11 +4,11 @@
 import { useEffect, useRef } from 'react'
 
 interface HeroProps {
-  onWebinarClick: () => void
+
   onPackagesClick: () => void
 }
 
-export default function HeroSection({ onWebinarClick, onPackagesClick }: HeroProps) {
+export default function HeroSection({ onPackagesClick }: HeroProps) {
   const particlesRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -104,8 +104,7 @@ export default function HeroSection({ onWebinarClick, onPackagesClick }: HeroPro
         </p>
 
         <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap', animation: 'fadeUp 1s ease 0.7s both' }}>
-          <button className="btn btn-terra" onClick={onWebinarClick}>
-            Reserve a webinar seat
+          <button className="btn btn-terra">
           </button>
           <button className="btn btn-ghost" onClick={onPackagesClick}>
             Explore care packages
